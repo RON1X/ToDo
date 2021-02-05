@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -19,6 +20,7 @@ import com.eachubkov.todoapp.utils.Constants.Companion.REQUEST_CODE
 import com.eachubkov.todoapp.utils.getArrayFromRes
 import com.eachubkov.todoapp.viewmodels.SharedViewModel
 import com.eachubkov.todoapp.viewmodels.ToDoViewModel
+import java.io.IOException
 
 class AddNoteFragment : Fragment() {
 
@@ -68,13 +70,13 @@ class AddNoteFragment : Fragment() {
 
     private fun addNote() {
         toDoViewModel.addNote(
-             NotesEntity(
-                  id = 0,
-                  title = binding.noteTitleTextView.text.toString(),
-                  description = binding.noteDescriptionTextView.text.toString(),
-                  image = (binding.noteImageImageView.drawable as BitmapDrawable?)?.bitmap,
-                  colorId = noteColorId
-             )
+            NotesEntity(
+                id = 0,
+                title = binding.noteTitleTextView.text.toString(),
+                description = binding.noteDescriptionTextView.text.toString(),
+                image = (binding.noteImageImageView.drawable as BitmapDrawable?)?.bitmap,
+                colorId = noteColorId
+            )
         )
         findNavController().navigate(R.id.action_addNoteFragment_to_listNoteFragment)
     }

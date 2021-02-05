@@ -7,18 +7,18 @@ import java.io.ByteArrayOutputStream
 
 class Converter {
     @TypeConverter
-    fun fromBitmap(image: Bitmap?): ByteArray? {
-        return image?.let {
+    fun fromBitmap(bitmap: Bitmap?): ByteArray? {
+        return bitmap?.let {
             val outputStream = ByteArrayOutputStream()
-            it.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            it.compress(Bitmap.CompressFormat.JPEG, 70, outputStream)
             outputStream.toByteArray()
         }
     }
 
     @TypeConverter
-    fun toBitmap(image: ByteArray?): Bitmap? {
-        return image?.let {
-            BitmapFactory.decodeByteArray(image, 0, image.size)
+    fun toBitmap(byteArray: ByteArray?): Bitmap? {
+        return byteArray?.let {
+            BitmapFactory.decodeByteArray(it, 0, it.size)
         }
     }
 }
