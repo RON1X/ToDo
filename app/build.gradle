@@ -89,9 +89,6 @@ dependencies {
     // RecyclerView Animation
     implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
 
-    // RecyclerView with Drag and Drop
-    implementation 'com.ernestoyaquello.dragdropswiperecyclerview:drag-drop-swipe-recyclerview:0.6.0'
-
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
