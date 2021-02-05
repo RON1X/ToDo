@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // Main Colors
+    <color name="dark">#121212</color>
+    <color name="gray">#232323</color>
+    <color name="light">#DCDCDC</color>
+    <color name="white">#FEFEFE</color>
+
+    // Note Colors
+    <color name="silver">#FEFEFE</color>
+    <color name="red">#f28b82</color>
+    <color name="yellow">#fff475</color>
+    <color name="green">#ccff90</color>
+    <color name="blueGreen">#a7ffeb</color>
+    <color name="blue">#cbf0f8</color>
+    <color name="blueDark">#aecbfa</color>
+    <color name="pink">#d7aefb</color>
+
+    <color name="noteStrokeColor">@color/light</color>
+    <color name="noteSelectedStrokeColor">@color/dark</color>
+
+    // Main
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryVariant">@color/white</color>
+    <color name="colorOnPrimary">@color/dark</color>
+    <color name="colorSecondary">@color/white</color>
+    <color name="colorSecondaryVariant">@color/white</color>
+    <color name="colorOnSecondary">@color/dark</color>
+    <color name="textColor">@color/dark</color>
+
+    // Action Mode
+    <color name="statusBarColor">@color/white</color>
+    <color name="contextualStatusBarColor">@color/white</color>
+
+</resources>

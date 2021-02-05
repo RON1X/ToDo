@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">Заметки</string>
+
+    <string name="menu_search_title">Поиск</string>
+    <string name="menu_delete_all_title">Удалить всё</string>
+    <string name="menu_change_theme_title">Сменить тему</string>
+    <string name="menu_dark_theme_title">Темная тема</string>
+    <string name="menu_light_theme_title">Светлая тема</string>
+    <string name="menu_system_theme_title">Системная тема</string>
+    <string name="menu_done_title">Сохранить</string>
+    <string name="menu_delete_title">Удалить</string>
+    <string name="menu_add_image_title">Добавить картинку</string>
+    <string name="menu_color_title">Изменить цвет</string>
+    <string name="menu_send_title">Отправить</string>
+
+    <string name="note_title_hint">Название</string>
+    <string name="note_description_title">Текст</string>
+
+    <string name="no_data">Здесь будут ваши заметки</string>
+
+    <array name="note_colors">
+        <item>@color/silver</item>
+        <item>@color/red</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/blueGreen</item>
+        <item>@color/blue</item>
+        <item>@color/blueDark</item>
+        <item>@color/pink</item>
+    </array>
+
+</resources>

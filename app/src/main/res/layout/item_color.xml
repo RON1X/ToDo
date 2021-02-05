@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="noteColor"
+            type="com.eachubkov.todoapp.models.NoteColor" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/color_cardView"
+        android:layout_width="@dimen/item_color_size"
+        android:layout_height="@dimen/item_color_size"
+        android:layout_margin="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@{noteColor.color}"
+        app:cardCornerRadius="60dp"
+        app:strokeColor="@color/noteStrokeColor"
+        app:strokeWidth="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_gravity="center"
+        tools:cardBackgroundColor="@color/blue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/color_ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                setViewVisibility="@{noteColor.isSelected}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_done"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
+

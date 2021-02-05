@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/listNoteFragment">
+
+    <fragment
+        android:id="@+id/listNoteFragment"
+        android:name="com.eachubkov.todoapp.ui.fragments.listnote.ListNoteFragment"
+        tools:layout="@layout/fragment_list_note">
+        <action
+            android:id="@+id/action_listNoteFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_listNoteFragment_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.eachubkov.todoapp.ui.fragments.addnote.AddNoteFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_listNoteFragment"
+            app:destination="@id/listNoteFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/listNoteFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addNoteFragment_to_selectColorDialog"
+            app:destination="@id/selectColorDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateNoteFragment"
+        android:name="com.eachubkov.todoapp.ui.fragments.updatenote.UpdateNoteFragment"
+        android:label=""
+        tools:layout="@layout/fragment_update_note" >
+        <action
+            android:id="@+id/action_updateNoteFragment_to_listNoteFragment"
+            app:destination="@id/listNoteFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/listNoteFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.eachubkov.todoapp.data.entity.NotesEntity" />
+        <action
+            android:id="@+id/action_updateNoteFragment_to_selectColorDialog"
+            app:destination="@id/selectColorDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/selectColorDialog"
+        android:name="com.eachubkov.todoapp.ui.dialog.SelectColorDialog"
+        android:label="dialog_select_color"
+        tools:layout="@layout/dialog_select_color" >
+        <action
+            android:id="@+id/action_selectColorDialog_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_selectColorDialog_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment" />
+    </dialog>
+
+</navigation>
